@@ -74,152 +74,150 @@ class StartUpView extends StatelessWidget {
             ),
           ),
           body: Container(
-            child: Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  //mainAxisAlignment: MainAxisAlignment.,
-                  children: [
-                    Container(
-                      child: SignedSpacingColumn(
-                        spacing: -410,
-                        stackingOrder: StackingOrder.lastOnTop,
-                        children: [
-                          Container(
-                            //borderRadius: BorderRadius.circular(20),
-                            child: Image.asset('assets/images/1899.jpg'),
+            child: SingleChildScrollView(
+              child: Column(
+                //mainAxisAlignment: MainAxisAlignment.,
+                children: [
+                  Container(
+                    child: SignedSpacingColumn(
+                      spacing: -410,
+                      stackingOrder: StackingOrder.lastOnTop,
+                      children: [
+                        Container(
+                          //borderRadius: BorderRadius.circular(20),
+                          child: Image.asset('assets/images/1899.jpg'),
+                        ),
+                        Container(
+                          //color: Colors.black12.withOpacity(0.3),
+                          height: 40,
+                          padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Spacer(),
+                              Text(
+                                "Tv shows",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15),
+                              ),
+                              Spacer(),
+                              Text(
+                                "Movies",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15),
+                              ),
+                              Spacer(),
+                              Text(
+                                "Browser",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15),
+                              ),
+                              Spacer(),
+                            ],
                           ),
-                          Container(
-                            //color: Colors.black12.withOpacity(0.3),
-                            height: 40,
-                            padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Spacer(),
-                                Text(
-                                  "Tv shows",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 15),
-                                ),
-                                Spacer(),
-                                Text(
-                                  "Movies",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 15),
-                                ),
-                                Spacer(),
-                                Text(
-                                  "Browser",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 15),
-                                ),
-                                Spacer(),
-                              ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 289,
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    color: Colors.black.withOpacity(0.8),
+                  ),
+                  Container(
+                    height: 86,
+                    //color: Colors.black.withOpacity(0.99),
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [Colors.black.withOpacity(0.5), Colors.red],
+                    )),
+                    padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                    child: Column(children: [
+                      Container(
+                        margin: EdgeInsets.only(bottom: 10),
+                        child: Text(
+                          "Mind-bending*Omnious*Action",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SizedBox(
+                            width: 3,
+                          ),
+                          Column(children: [
+                            Icon(
+                              Icons.add,
+                              size: 15,
+                              color: Colors.black,
                             ),
+                            Text(
+                              "My list",
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 13),
+                            ),
+                          ]),
+                          Container(
+                            height: 25,
+                            margin: EdgeInsets.only(bottom: 0),
+                            child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.black),
+                                onPressed: (() {
+                                  print("object");
+                                }),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.play_arrow,
+                                      size: 15,
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      "Play",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13),
+                                    ),
+                                  ],
+                                )),
+                          ),
+                          Column(children: [
+                            Icon(
+                              Icons.info_outline,
+                              size: 15,
+                              color: Colors.black,
+                            ),
+                            Text(
+                              "Info",
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 13),
+                            ),
+                          ]),
+                          SizedBox(
+                            width: 3,
                           ),
                         ],
                       ),
-                    ),
-                    SizedBox(
-                      height: 289,
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      color: Colors.black.withOpacity(0.8),
-                    ),
-                    Container(
-                      height: 86,
-                      //color: Colors.black.withOpacity(0.99),
-                      decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [Colors.black.withOpacity(0.5), Colors.red],
-                      )),
-                      padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-                      child: Column(children: [
-                        Container(
-                          margin: EdgeInsets.only(bottom: 10),
-                          child: Text(
-                            "Mind-bending*Omnious*Action",
-                            style: TextStyle(
-                              color: Colors.black,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            SizedBox(
-                              width: 3,
-                            ),
-                            Column(children: [
-                              Icon(
-                                Icons.add,
-                                size: 15,
-                                color: Colors.black,
-                              ),
-                              Text(
-                                "My list",
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 13),
-                              ),
-                            ]),
-                            Container(
-                              height: 25,
-                              margin: EdgeInsets.only(bottom: 0),
-                              child: ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.black),
-                                  onPressed: (() {
-                                    print("object");
-                                  }),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.play_arrow,
-                                        size: 15,
-                                        color: Colors.white,
-                                      ),
-                                      Text(
-                                        "Play",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 13),
-                                      ),
-                                    ],
-                                  )),
-                            ),
-                            Column(children: [
-                              Icon(
-                                Icons.info_outline,
-                                size: 15,
-                                color: Colors.black,
-                              ),
-                              Text(
-                                "Info",
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 13),
-                              ),
-                            ]),
-                            SizedBox(
-                              width: 3,
-                            ),
-                          ],
-                        ),
-                      ]),
-                    ),
-                  ],
-                ),
+                    ]),
+                  ),
+                ],
               ),
             ),
           ),
