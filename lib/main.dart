@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import 'app/app.locator.dart';
 import 'app/app.router.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   setupLocator();
   runApp(const MyApp());
 }
