@@ -6,6 +6,6 @@ class Flimlists extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(child: Image.asset(path));
+    return Card(child: InkWell(child: Image.asset(path)));
   }
 }
