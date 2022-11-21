@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/ui/views/start_up/widgets/continue.dart';
+import 'package:netflix_clone/ui/views/start_up/widgets/flist.dart';
 import 'package:signed_spacing_flex/signed_spacing_flex.dart';
 import 'package:stacked/stacked.dart';
 
@@ -44,8 +46,7 @@ class StartUpView extends StatelessWidget {
                       width: 20,
                       child: ClipRRect(
                         //borderRadius: BorderRadius.circular(20),
-                        child: Image.asset(
-                            'assets/images/Netflix-logo-on-transparent-background-PNG-removebg-preview.png'),
+                        child: Image.asset(model.path),
                       ),
                     ),
                     Row(
@@ -76,7 +77,9 @@ class StartUpView extends StatelessWidget {
           body: Container(
             child: SingleChildScrollView(
               child: Column(
-                //mainAxisAlignment: MainAxisAlignment.,
+                //mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+
                 children: [
                   Container(
                     child: SignedSpacingColumn(
@@ -216,6 +219,72 @@ class StartUpView extends StatelessWidget {
                         ],
                       ),
                     ]),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(left: 10),
+                        child: Text(
+                          "Continue Watching",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                        //color: Colors.red,
+                        height: 120,
+                        child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: model.flist.length,
+                            itemBuilder: (context, int index) {
+                              return Continue(
+                                path: model.flist[index].path!,
+                              );
+                            }),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(left: 10),
+                        child: Text(
+                          "New on netflix",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                        //color: Colors.red,
+                        height: 200,
+                        child: ListView.builder(
+                            reverse: true,
+                            scrollDirection: Axis.horizontal,
+                            itemCount: model.flist.length,
+                            itemBuilder: (context, int index) {
+                              return Flimlists(
+                                path: model.flist[index].path!,
+                              );
+                            }),
+                      ),
+                    ],
                   ),
                 ],
               ),
