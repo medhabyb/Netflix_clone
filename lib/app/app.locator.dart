@@ -20,6 +20,6 @@ Future<void> setupLocator(
       environment: environment, environmentFilter: environmentFilter);
 
 // Register dependencies
-  locator.registerSingleton(Films());
+  locator.registerLazySingleton(() => Films());
   locator.registerSingleton(NavigationService());
 }

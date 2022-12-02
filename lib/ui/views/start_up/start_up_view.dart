@@ -245,10 +245,10 @@ class StartUpView extends StatelessWidget {
                         height: 120,
                         child: ListView.builder(
                             scrollDirection: Axis.horizontal,
-                            itemCount: model.flist.length,
+                            itemCount: model.gfilms.length,
                             itemBuilder: (context, int index) {
                               return Continue(
-                                path: model.flist[index].path!,
+                                path: model.gfilms[index].path!,
                               );
                             }),
                       ),
@@ -277,10 +277,10 @@ class StartUpView extends StatelessWidget {
                         child: ListView.builder(
                             reverse: true,
                             scrollDirection: Axis.horizontal,
-                            itemCount: model.flist.length,
+                            itemCount: model.gfilms.length,
                             itemBuilder: (context, int index) {
                               return Flimlists(
-                                path: model.flist[index].path!,
+                                path: model.gfilms[index].path!,
                               );
                             }),
                       ),
