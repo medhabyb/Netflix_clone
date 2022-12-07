@@ -43,6 +43,8 @@ dependencies:
   intl: ^0.16.1
   signed_spacing_flex: ^0.0.5
   searchable_listview:  2.2.1
+  flutter_arc_text: ^0.5.0
+  google_fonts: ^3.0.1
 
 dev_dependencies:
   flutter_test:
