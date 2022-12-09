@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -23,7 +24,7 @@ class LoginView extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/images/DDD.jpg"),
-              colorFilter: new ColorFilter.mode(
+              colorFilter: ColorFilter.mode(
                   Colors.black.withOpacity(0.15), BlendMode.dstATop),
               fit: BoxFit.cover,
             ),
@@ -35,7 +36,7 @@ class LoginView extends StatelessWidget {
                   Container(
                     height: 100,
                     width: 300,
-                    child: Center(
+                    child: const Center(
                         child: Text(
                       "N E T F L I X",
                       style: TextStyle(
@@ -44,7 +45,7 @@ class LoginView extends StatelessWidget {
                           color: Colors.red),
                     )),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 60,
                   ),
                   //Email
@@ -56,7 +57,7 @@ class LoginView extends StatelessWidget {
                         color: Colors.grey[300],
                       ),
                       decoration: InputDecoration(
-                        enabledBorder: UnderlineInputBorder(
+                        enabledBorder: const UnderlineInputBorder(
                           //<-- SEE HERE
                           borderSide: BorderSide(width: 3, color: Colors.grey),
                         ),
@@ -175,7 +176,7 @@ class LoginView extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
+                      children: const [
                         Text(
                           "Terms",
                           style: TextStyle(color: Colors.white),
